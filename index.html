@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app lang="zh">
 <head>
+	<meta charset="utf-8">
 	<title>AngularJS</title>
+	<link rel="stylesheet" href="css/index.css">
 	<script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
 </head>
 <body>
-	Hello {{'world'}}!
-	Your name:<input type="text" name="" ng-model="yourname" placeholder="World">
-	Hello {{yourname||'world'}}
-	sex:<input type="text" name="" ng-model="sex">
-	I'm a {{sex}}
+	<p>字符串拼接：Nothing here {{'yet' + '!'}}</p>
+	<p>数学表达式：1+2={{1+2}}</p>
 </body>
 </html>
