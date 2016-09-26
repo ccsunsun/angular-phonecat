@@ -1,0 +1,31 @@
+<img ng-src="{{phone.images[0]}}" alt="">
+<h1>{{phone.name}}</h1>
+<p>{{phone.description}}</p>
+
+<h1>Filter Test</h1>
+<p>uppercase: {{"lower cap string"|uppercase}}</p>
+<p>json: {{{foo:"bar",baz:23}|json}}</p>
+<p>date: {{1304375948024|date}}</p>
+<p>date:"MM/dd/yyyy h:mma": {{1304375948024|date:"MM/dd/yyyy h:mma"}}</p>
+<ul>
+    <li ng-repeat="i in list">
+        {{i.name}} : {{i.code|fc}}
+    </li>
+</ul>
+
+<p>在控制器内创建方法属性</p>
+<img ng-src="{{mainImageUrl}}" alt="">
+<ul>
+    <li ng-repeat="img in phone.images">
+        <img ng-src="{{img}}" alt="" ng-click="setImage(img)">
+    </li>
+</ul>
+<dl>
+    <dt>Infrared</dt>
+    <dd>{{phone.connectivity.infrared|checkmark}}</dd>
+    <dt>GPS</dt>
+    <dd>{{phone.connectivity.gps|checkmark}}</dd>
+</dl>
+<button ng-click="hello('Elmo')">hello</button>
+
+

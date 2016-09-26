@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app ng-controller="test">
+<head>
+	<meta charset="utf-8">
+	<title>test 5</title>
+	<script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+</head>
+<body>
+	search:<input type="text" name="" ng-model="query">
+	sort by:
+	<select ng-model="orderProp">
+		<option value="name" selected>haha</option>
+		<option value="age">13</option>
+	</select>
+	<p>{{orderProp}}</p>
+	<ul>
+		<li ng-repeat="phone in phones | filter : query | orderBy : orderProp">
+			{{phone.name}}
+			<p>{{phone.snippet}}</p>
+		</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	function test($scope){
+		// 初始化
+		$scope.orderProp="name";
+		$scope.phones=[
+			{
+				"name": "Nexus S",
+				"snippet": "Fast just got faster with Nexus S.",
+				"age": 2
+			},
+			{
+				"name": "Motorola XOOM™ with Wi-Fi",
+				"snippet": "The Next, Next Generation tablet.",
+				"age": 1
+			},
+			{
+				"name": "MOTOROLA XOOM™",
+				"snippet": "The Next, Next Generation tablet.",
+				"age": 3
+			}
+		];
+	}
+</script>
+</html>

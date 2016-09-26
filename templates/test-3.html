@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>test 3</title>
+	<script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+</head>
+<body ng-controller="test">
+
+<div>
+	search:<input type="text" name="" ng-model="searchTxt">
+</div>
+<div>
+	<ul>
+		<li ng-repeat="phone in phones|filter:searchTxt">
+			{{phone.name}}
+			<p>{{phone.snippet}}</p>
+		</li>
+	</ul>
+</div>
+
+</body>
+<script type="text/javascript">
+	function test($scope){
+		$scope.phones=[
+			{
+				"name": "Nexus S",
+				"snippet": "Fast just got faster with Nexus S."
+			},
+			{
+				"name": "Motorola XOOM™ with Wi-Fi",
+				"snippet": "The Next, Next Generation tablet."
+			},
+			{
+				"name": "MOTOROLA XOOM™",
+				"snippet": "The Next, Next Generation tablet."
+			}
+		];
+	}
+</script>
+</html>

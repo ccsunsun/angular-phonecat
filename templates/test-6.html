@@ -1,0 +1,11 @@
+<div ng-controller="list">
+	<ul>
+		<li ng-repeat="phone in phones | filter : query | orderBy : orderProp">
+			<a href="#/phones/{{phone.id}}">
+				<img ng-src="{{phone.imageUrl}}" alt="">
+			</a>
+			<a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+			<p>{{phone.snippet}}</p>
+		</li>
+	</ul>
+</div>

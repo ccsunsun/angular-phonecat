@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>test 01</title>
+	<script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+</head>
+<body ng-controller="phoneListControl">
+	<!-- phone list -->
+	<ul>
+		<li ng-repeat="phone in phones">
+			{{phone.name}}
+			<p>{{phone.snippet}}</p>
+		</li>
+	</ul>
+	<p>共计：{{phones.length}}台手机</p>
+	
+
+	<!-- model：hello -->
+	<p>{{hello}}</p>
+	<input type="text" name="name" ng-model="hello">
+
+	<!-- 迭代器 -->
+	<table>
+		<tr>
+			<th>number</th>
+			<th>number+1</th>
+		</tr>
+		<tr ng-repeat="i in [1,2,3,4,5,6,7,8,9]">
+			<td>{{i}}</td>
+			<td>{{i+1}}</td>
+		</tr>
+	</table>
+
+</body>
+
+<!-- controller  -->
+<script type="text/javascript">
+	function phoneListControl($scope){
+		$scope.phones=[
+			{
+				"name": "Nexus S",
+				"snippet": "Fast just got faster with Nexus S."},
+			{
+				"name": "Motorola XOOM™ with Wi-Fi",
+				"snippet": "The Next, Next Generation tablet."},
+			{
+				"name": "MOTOROLA XOOM™",
+				"snippet": "The Next, Next Generation tablet."
+			}
+		];
+		// 数据模型
+		$scope.hello="hello,World!"
+	}
+</script>
+</html>

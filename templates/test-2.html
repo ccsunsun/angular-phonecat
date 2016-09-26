@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>test 2</title>
+	<script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+</head>
+<body >
+<div ng-controller="test">
+	<ul>
+		<li ng-repeat="i in list">
+			<p>{{i.name}}</p>
+			<p>{{i.status==12?'已支付':'未支付'}}</p>
+		</li>
+	</ul>
+</div>
+
+</body>
+<script type="text/javascript">
+	function test($scope){
+		$scope.list=[
+			{
+				"name":"sunsun",
+				"status":12
+			},
+			{
+				"name":"sunsun2",
+				"status":12
+			},
+			{
+				"name":"sunsun3",
+				"status":13
+			}
+		];
+		$scope.f12=function(e){return e.status==12;}
+	}
+</script>
+</html>
